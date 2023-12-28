@@ -4,7 +4,7 @@ import Categories from "../components/categories";
 import Featured from "../components/featured";
 import BestSeller from "../components/bestseller";
 import Blog from "../components/blog";
-const home = () => {
+const Home = () => {
   return (
     <div>
       <HomeHero />
@@ -16,4 +16,4 @@ const home = () => {
   );
 };
 
-export default home;
+export default Home;

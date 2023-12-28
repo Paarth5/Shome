@@ -1,7 +1,7 @@
 import React from "react";
 import blogData from "../data/blogData";
 import BlogCard from "./blogCard";
-const blog = () => {
+const Blog = () => {
   return (
     <div>
       <h1>Latest Blog</h1>
@@ -15,4 +15,4 @@ const blog = () => {
   );
 };
 
-export default blog;
+export default Blog;

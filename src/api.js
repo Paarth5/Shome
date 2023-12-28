@@ -1,39 +1,23 @@
 import axios from "axios";
-const loginUser = async (e) => {
-  e.preventDefault();
-  const formData = new FormData(e.target);
-  const user = {
-    username: formData.get("username"),
-    password: formData.get("password"),
-  };
+const server_url = "https://shome-server.onrender.com";
+const loginUser = async (user) => {
   try {
-    const response = await axios.post("http://localhost:3001/login", user);
-    console.log(response.data);
-    const authToken = response.data.token;
-    localStorage.setItem("authToken", authToken);
+    const response = await axios.post(`${server_url}/login`, user);
+    return response.data;
   } catch (error) {
     console.error("Login failed:", error.message);
+    throw error;
   }
-  // window.location.href = "/";
 };
 
-const registerUser = async (e) => {
-  e.preventDefault();
+const registerUser = async (user) => {
   try {
-    const formData = new FormData(e.target);
-    const user = {
-      firstname: formData.get("firstname"),
-      lastname: formData.get("lastname"),
-      email: formData.get("email"),
-      username: formData.get("username"),
-      password: formData.get("password"),
-    };
-    const response = await axios.post("http://localhost:3001/register", user);
-    console.log(response.data);
+    const response = await axios.post(`${server_url}/register`, user);
+    return response.data;
   } catch (error) {
-    console.error("Registeration failed:", error.message);
+    console.error("Registration failed:", error.message);
+    throw error;
   }
-  // window.location.href = "/";
 };
 
 export { loginUser, registerUser };

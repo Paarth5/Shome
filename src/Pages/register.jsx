@@ -1,11 +1,33 @@
 import React from "react";
 import { registerUser } from "../api";
+import { useAuth } from "../authContext";
 
-const login = () => {
+const Register = () => {
+  const { login } = useAuth();
+  const handleRegister = async (e) => {
+    e.preventDefault();
+    try {
+      const formData = new FormData(e.target);
+      const user = {
+        firstname: formData.get("firstname"),
+        lastname: formData.get("lastname"),
+        email: formData.get("email"),
+        username: formData.get("username"),
+        password: formData.get("password"),
+      };
+      const userData = await registerUser(user);
+      console.log(userData);
+      login(userData);
+      console.log("Registration successful:", userData);
+    } catch (error) {
+      console.error("Registration failed:", error.message);
+    }
+    window.location.href = "/";
+  };
   return (
     <div>
       <h1>Create New Account</h1>
-      <form action="/" onSubmit={registerUser}>
+      <form action="/" onSubmit={handleRegister}>
         <label htmlFor="firstname">First Name: </label>
         <input
           type="text"
@@ -55,4 +77,4 @@ const login = () => {
   );
 };
 
-export default login;
+export default Register;

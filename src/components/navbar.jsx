@@ -6,7 +6,9 @@ import SearchIcon from "@mui/icons-material/Search";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-const navbar = () => {
+import { useAuth } from "../authContext";
+const Navbar = () => {
+  const { user } = useAuth();
   const handleClick = (e) => {
     e.preventDefault();
     const search_bar = document.querySelector("#search_bar");
@@ -14,7 +16,7 @@ const navbar = () => {
   };
   return (
     <div>
-      <div className="bg-yellow-300">
+      <div>
         <p>World Wide Completely Free Returns and Free Shipping</p>
         <div>
           <LocalPhoneIcon />
@@ -31,7 +33,7 @@ const navbar = () => {
         <div>
           <PersonIcon />
           <a href="/login">
-            <p>Account</p>
+            <p>{user ? user.username : "Account"}</p>
           </a>
         </div>
       </div>
@@ -87,4 +89,4 @@ const navbar = () => {
   );
 };
 
-export default navbar;
+export default Navbar;

@@ -1,6 +1,6 @@
 import React from "react";
 
-const homehero = () => {
+const Homehero = () => {
   return (
     <div>
       <div>
@@ -15,4 +15,4 @@ const homehero = () => {
   );
 };
 
-export default homehero;
+export default Homehero;

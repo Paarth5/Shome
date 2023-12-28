@@ -3,7 +3,7 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import ZoomOutMapIcon from "@mui/icons-material/ZoomOutMap";
 import CompareIcon from "@mui/icons-material/Compare";
-const card = (props) => {
+const Card = (props) => {
   const handleClick = (e) => {
     e.preventDefault();
   };
@@ -36,4 +36,4 @@ const card = (props) => {
   );
 };
 
-export default card;
+export default Card;

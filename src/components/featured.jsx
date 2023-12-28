@@ -1,7 +1,7 @@
 import React from "react";
 import data from "../data/featured";
 import Card from "./card";
-const featured = () => {
+const Featured = () => {
   return (
     <div>
       <div>
@@ -28,4 +28,4 @@ const featured = () => {
   );
 };
 
-export default featured;
+export default Featured;

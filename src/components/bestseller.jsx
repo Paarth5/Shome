@@ -3,7 +3,7 @@ import Card from "./card";
 import data from "../data/featured";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-const bestseller = () => {
+const Bestseller = () => {
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -66,4 +66,4 @@ const bestseller = () => {
   );
 };
 
-export default bestseller;
+export default Bestseller;

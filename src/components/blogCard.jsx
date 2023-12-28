@@ -1,7 +1,7 @@
 import React from "react";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import PersonIcon from "@mui/icons-material/Person";
-const blogCard = (props) => {
+const BlogCard = (props) => {
   const handleClick = (e) => {
     e.preventDefault();
   };
@@ -24,4 +24,4 @@ const blogCard = (props) => {
   );
 };
 
-export default blogCard;
+export default BlogCard;

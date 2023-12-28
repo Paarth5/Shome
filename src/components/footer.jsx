@@ -3,7 +3,7 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import PinterestIcon from "@mui/icons-material/Pinterest";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
-const footer = () => {
+const Footer = () => {
   const handleClick = (e) => {
     e.preventDefault();
   };
@@ -90,4 +90,4 @@ const footer = () => {
   );
 };
 
-export default footer;
+export default Footer;

@@ -1,7 +1,7 @@
 import React from "react";
 import data from "../data/categories";
 import CategoryCard from "./categoryCard";
-const categories = () => {
+const Categories = () => {
   return (
     <div>
       {data.map((d) => {
@@ -11,4 +11,4 @@ const categories = () => {
   );
 };
 
-export default categories;
+export default Categories;

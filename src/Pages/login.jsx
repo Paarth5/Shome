@@ -1,10 +1,28 @@
 import React from "react";
 import { loginUser } from "../api";
-const login = () => {
+import { useAuth } from "../authContext";
+const Login = () => {
+  const { login } = useAuth();
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    try {
+      const formData = new FormData(e.target);
+      const user = {
+        username: formData.get("username"),
+        password: formData.get("password"),
+      };
+      const userData = await loginUser(user);
+      login(userData.user);
+    } catch (error) {
+      console.error("Login failed:", error.message);
+    }
+    window.location.href = "/";
+  };
   return (
     <div>
       <h1>Login</h1>
-      <form action="/" onSubmit={loginUser}>
+      <form action="/" onSubmit={handleLogin}>
         <label htmlFor="username">Username: </label>
         <input
           type="text"
@@ -31,4 +49,4 @@ const login = () => {
   );
 };
 
-export default login;
+export default Login;

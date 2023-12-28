@@ -1,6 +1,6 @@
 import React from "react";
 
-const categoryCard = (props) => {
+const CategoryCard = (props) => {
   return (
     <div>
       <img src={props.img_src} alt={props.head} />
@@ -10,4 +10,4 @@ const categoryCard = (props) => {
   );
 };
 
-export default categoryCard;
+export default CategoryCard;
