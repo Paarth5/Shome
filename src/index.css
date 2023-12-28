@@ -1,0 +1,47 @@
+*::selection {
+  color: white;
+  background: #eb3e32;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+}
+a:hover {
+  color: #eb3e32;
+}
+.card-hidden-btn {
+  display: none;
+  width: 40px;
+}
+.feat-card:hover .card-hidden-btn {
+  display: flex;
+  flex-direction: column;
+  transition: all 0.5s;
+}
+.feat-card-img {
+  height: 200px;
+}
+.carousel-cont {
+  margin: 10px 10%;
+}
+.zoomable-image {
+  overflow: hidden;
+  width: 100%;
+}
+.feat-card:hover .feat-card-img {
+  scale: 1.05;
+  transition: all 0.35s;
+}
+.toggle-btn {
+  background-color: white;
+  border: 0.5px solid grey;
+  color: grey;
+  font-size: 15px;
+  padding: 5px;
+  transition: all 0.35s linear;
+  border-radius: 5px;
+}
+.toggle-btn:hover {
+  color: white;
+  background-color: red;
+}

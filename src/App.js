@@ -1,15 +1,23 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./Pages/home";
+import Login from "./Pages/login";
+import Register from "./Pages/register";
+import Footer from "./components/footer";
 import Navbar from "./components/navbar";
-import HomeHero from "./components/homehero";
-import Categories from "./components/categories";
-import Featured from "./components/featured";
+import "./index.css";
+
 function App() {
   return (
-    <div className="App">
-      {/* <Navbar /> */}
-      {/* <HomeHero /> */}
-      {/* <Categories /> */}
-      <Featured />
-    </div>
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/login" element={<Login />}></Route>
+        <Route path="/register" element={<Register />}></Route>
+        <Route path="*" element={<Home to="/" replace={true} />} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
   );
 }
 

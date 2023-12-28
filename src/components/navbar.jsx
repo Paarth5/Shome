@@ -30,7 +30,7 @@ const navbar = () => {
         </div>
         <div>
           <PersonIcon />
-          <a href="./">
+          <a href="/login">
             <p>Account</p>
           </a>
         </div>
