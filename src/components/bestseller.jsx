@@ -45,7 +45,7 @@ const bestseller = () => {
           itemClass="carousel-item-padding-40-px"
         >
           {data.map((d) => {
-            return <Card {...d} />;
+            return <Card key={d.id} {...d} />;
           })}
         </Carousel>
       </div>

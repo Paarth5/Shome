@@ -10,7 +10,7 @@ const featured = () => {
       </div>
       <div>
         {data.map((d) => {
-          return <Card {...d} />;
+          return <Card key={d.id} {...d} />;
         })}
       </div>
       <div>

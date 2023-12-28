@@ -14,7 +14,7 @@ const navbar = () => {
   };
   return (
     <div>
-      <div>
+      <div className="bg-yellow-300">
         <p>World Wide Completely Free Returns and Free Shipping</p>
         <div>
           <LocalPhoneIcon />

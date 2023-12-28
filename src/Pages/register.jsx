@@ -1,10 +1,11 @@
 import React from "react";
+import { registerUser } from "../api";
 
 const login = () => {
   return (
     <div>
-      <h1>Login</h1>
-      <form action="">
+      <h1>Create New Account</h1>
+      <form action="/" onSubmit={registerUser}>
         <label htmlFor="firstname">First Name: </label>
         <input
           type="text"

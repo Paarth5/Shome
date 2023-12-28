@@ -4,7 +4,6 @@ import Login from "./Pages/login";
 import Register from "./Pages/register";
 import Footer from "./components/footer";
 import Navbar from "./components/navbar";
-import "./index.css";
 
 function App() {
   return (
