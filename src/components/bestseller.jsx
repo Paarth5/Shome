@@ -28,7 +28,7 @@ const Bestseller = () => {
         <p>There are many variations of passages of Lorem Ipsum available</p>
       </div>
       <div className="carousel-cont">
-        <Carousel
+        {/* <Carousel
           swipeable={true}
           draggable={false}
           showDots={false}
@@ -47,7 +47,28 @@ const Bestseller = () => {
           {data.map((d) => {
             return <Card key={d.id} {...d} />;
           })}
+        </Carousel> */}
+        <Carousel
+          swipeable={false}
+          draggable={false}
+          showDots={true}
+          responsive={responsive}
+          ssr={true} // means to render carousel on server-side.
+          infinite={true}
+          autoPlaySpeed={1000}
+          keyBoardControl={true}
+          customTransition="all .5"
+          transitionDuration={500}
+          containerClass="carousel-container"
+          removeArrowOnDeviceType={["tablet", "mobile"]}
+          dotListClass="custom-dot-list-style"
+          itemClass="carousel-item-padding-40-px"
+        >
+          {data.map((d) => {
+            return <Card key={d.id} {...d} />;
+          })}
         </Carousel>
+        ;
       </div>
       <div>
         <div>

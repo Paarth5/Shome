@@ -15,7 +15,7 @@ function App() {
         <Route path="/register" element={<Register />}></Route>
         <Route path="*" element={<Home to="/" replace={true} />} />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </BrowserRouter>
   );
 }

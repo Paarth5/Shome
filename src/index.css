@@ -1,6 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  transition: all 0.25s;
+}
 *::selection {
   color: white;
   background: #eb3e32;
+}
+html {
+  position: relative;
+  min-height: 100%;
 }
 body {
   font-family: "Open Sans", sans-serif;
@@ -8,6 +18,7 @@ body {
 }
 a:hover {
   color: #eb3e32;
+  transition: all 0.25s;
 }
 .card-hidden-btn {
   display: none;
@@ -30,7 +41,7 @@ a:hover {
 }
 .feat-card:hover .feat-card-img {
   scale: 1.05;
-  transition: all 0.35s;
+  transition: all 0.25s;
 }
 .toggle-btn {
   background-color: white;
@@ -44,4 +55,24 @@ a:hover {
 .toggle-btn:hover {
   color: white;
   background-color: red;
+}
+.footer {
+  background-color: #26292e;
+}
+.footer-col {
+  max-width: 25%;
+}
+.home-hero-col {
+  max-width: 50%;
+}
+.home-hero-img {
+  background-image: url("../public/assets/images/home-hero-bg.png");
+  border-radius: 100%;
+}
+.category-card-cont {
+  width: 30%;
+}
+.category-card-cont:hover .zooming-img {
+  scale: 1.02;
+  transition: all 0.5s;
 }
