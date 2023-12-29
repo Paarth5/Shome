@@ -1,5 +1,5 @@
 import axios from "axios";
-const server_url = "http://localhost:3001";
+const server_url = "https://shome-server.onrender.com";
 const loginUser = async (user) => {
   try {
     const response = await axios.post(`${server_url}/login`, user);

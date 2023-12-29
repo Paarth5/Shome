@@ -23,7 +23,7 @@ const Bestseller = () => {
   };
   return (
     <>
-      {/* <div>
+      <div>
         <h1 className="text-5xl font-bold text-center">Best Seller</h1>
         <p className="text-xl mt-5 text-center mb-10">
           There are many variations of passages of Lorem Ipsum available
@@ -55,7 +55,7 @@ const Bestseller = () => {
             return <Card2 key={d.id} {...d} />;
           })}
         </Carousel>
-      </div> */}
+      </div>
       <div
         className="flex px-10
     lg:px-20
