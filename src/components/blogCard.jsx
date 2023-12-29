@@ -6,7 +6,7 @@ const BlogCard = (props) => {
     e.preventDefault();
   };
   return (
-    <div>
+    <div className="w-96 m-auto mb-10">
       <img src={props.img_src} alt={props.head} className="rounded-lg mb-10" />
       <div className="mb-5 flex align-center">
         <CalendarMonthIcon className="text-red-500 mr-2" />

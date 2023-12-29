@@ -29,6 +29,9 @@ a:hover {
   flex-direction: column;
   transition: all 0.5s;
 }
+.feat-card {
+  width: 250px;
+}
 .feat-card-img {
   height: 200px;
 }
@@ -68,6 +71,7 @@ a:hover {
 }
 .category-card-cont {
   width: 30%;
+  min-width: 300px;
 }
 .category-card-cont:hover .zooming-img {
   scale: 1.02;
@@ -79,4 +83,23 @@ a:hover {
 }
 .last-comp {
   margin-bottom: 400px;
+}
+@media (max-width: 800px) {
+  .footer-col {
+    max-width: 100%;
+  }
+  .last-comp {
+    margin-bottom: 700px;
+  }
+  .feat-card {
+    width: 300px;
+  }
+  .image-zoom {
+    width: 90%;
+  }
+}
+@media (max-width: 400px) {
+  .feat-card {
+    width: 80%;
+  }
 }

@@ -8,7 +8,7 @@ const Card = (props) => {
     e.preventDefault();
   };
   return (
-    <div className="feat-card relative mb-10">
+    <div className="feat-card relative mb-10 feat-card m-auto">
       <div className="zoomable-image border border-grey-500 p-3 border-2 rounded-lg h-64">
         <img src={props.img_src} alt={props.name} className="feat-card-img" />
       </div>

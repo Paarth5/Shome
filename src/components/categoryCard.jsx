@@ -2,7 +2,7 @@ import React from "react";
 
 const CategoryCard = (props) => {
   return (
-    <div className="category-card-cont h-96 relative">
+    <div className="category-card-cont h-96 relative mb-5 m-auto w-80 ">
       <img
         src={props.img_src}
         alt={props.head}

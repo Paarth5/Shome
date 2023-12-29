@@ -23,13 +23,18 @@ const Bestseller = () => {
   };
   return (
     <>
-      <div>
+      {/* <div>
         <h1 className="text-5xl font-bold text-center">Best Seller</h1>
         <p className="text-xl mt-5 text-center mb-10">
           There are many variations of passages of Lorem Ipsum available
         </p>
       </div>
-      <div className="px-40">
+      <div
+        className="px-10
+    lg:px-20
+    xl:px-40
+    xxl:px-60"
+      >
         <Carousel
           swipeable={true}
           draggable={true}
@@ -50,9 +55,13 @@ const Bestseller = () => {
             return <Card2 key={d.id} {...d} />;
           })}
         </Carousel>
-        ;
-      </div>
-      <div className="flex px-40 mt-20 justify-around">
+      </div> */}
+      <div
+        className="flex px-10
+    lg:px-20
+    xl:px-40
+    xxl:px-60 mt-20 justify-around flex-col xxl:flex-row items-center "
+      >
         <div>
           <img
             src=".\assets\images\sports_shoes1.png"
@@ -60,13 +69,13 @@ const Bestseller = () => {
             className="image-zoom"
           />
         </div>
-        <div>
+        <div className="flex flex-col-reverse xxl:flex-col">
           <img
             src=".\assets\images\sports_shoes2.png"
             alt="blog"
             className="image-zoom"
           />
-          <div className="mt-10 ml-10">
+          <div className="xxl:mt-10 xxl:ml-10 my-3">
             <h1 className="text-6xl font-bold my-2">Sports Shoes</h1>
             <p className="text-2xl text-gray-500 my-4">
               UP TO 30% OFF ALL SHOES & PRODUCTS

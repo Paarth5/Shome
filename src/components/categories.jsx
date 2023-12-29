@@ -3,7 +3,7 @@ import data from "../data/categories";
 import CategoryCard from "./categoryCard";
 const Categories = () => {
   return (
-    <div className="px-40 flex justify-between items-center mt-20">
+    <div className="px-10 flex flex-wrap justify-between align-center mt-20 lg:px-20 xl:px-40">
       {data.map((d) => {
         return <CategoryCard key={d.id} {...d} />;
       })}

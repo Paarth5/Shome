@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import EmailIcon from "@mui/icons-material/Email";
 import PersonIcon from "@mui/icons-material/Person";
+import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
@@ -26,22 +27,39 @@ const Navbar = () => {
   };
   return (
     <div>
-      <div className="flex flex-row justify-between bg-gray-100 flex flex-row items-center font-lighter text-gray-600 px-40 py-3 text-sm tracking-widest">
+      <div
+        className="flex flex-row justify-center bg-gray-100 flex flex-row items-center font-lighter text-gray-600  py-3 md:text-sm text-xs text-center tracking-widest 
+        xxl:px-40
+        xl:px-20  xl:justify-between
+        "
+      >
         <p>World Wide Completely Free Returns and Free Shipping</p>
         <div className="flex flex-row items-center">
-          <div className="flex flex-row items-center">
+          <div
+            className="items-center hidden
+          xl:flex
+          "
+          >
             <LocalPhoneIcon className="text-red-600" />
             <a href="./" className="ml-3 mr-3 pr-3 border-r border-black">
               <p>+00 123 456 789</p>
             </a>
           </div>
-          <div className="flex flex-row items-center">
+          <div
+            className="items-center hidden
+          xl:flex
+          "
+          >
             <EmailIcon className="text-red-600" />
             <a href="./" className="ml-3 mr-3 pr-3 border-r border-black">
               <p>demo@example.com</p>
             </a>
           </div>
-          <div className="flex flex-row items-center">
+          <div
+            className="items-center hidden
+          xl:flex
+          "
+          >
             <PersonIcon className="text-red-600" />
             <a href="/login" className="ml-3">
               <p>{user ? user.username : "Account"}</p>
@@ -49,11 +67,18 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-row items-center px-40 justify-between my-5 items-center">
+      <div
+        className="flex flex-row items-center justify-between my-5 items-center
+        xl:px-40
+        lg:px-40
+        md: px-20
+        sm:px-10
+        xs: px-3"
+      >
         <a href="/">
           <img src="./assets/images/logo1.svg" alt="Logo" className="w-40" />
         </a>
-        <form action="/" className="mr-10">
+        <form action="/" className="mr-10 hidden xl:block">
           <input
             type="text"
             name="Search"
@@ -70,16 +95,22 @@ const Navbar = () => {
           </button>
         </form>
         <div>
+          <button href="/" className="scale-110 mr-3 xl:hidden">
+            <SearchIcon />
+          </button>
           <button href="/" className="scale-110 mr-3 ">
             <FavoriteBorderIcon />
           </button>
-          <button href="/" className="scale-110">
+          <button href="/" className="scale-110 ">
             <ShoppingBagOutlinedIcon />
           </button>
+          <a href="/login" className="scale-110 ml-3 xl:hidden">
+            <MenuIcon />
+          </a>
         </div>
       </div>
-      <div className="mx-40 mt-10 ">
-        <ul className="py-3 flex flex-row items-center justify-around px-60 text-xs font-semibold text-white bg-red bg-red-500 rounded-tl-lg rounded-tr-lg">
+      <div className="mx-40 mt-10 hidden xl:block ">
+        <ul className="py-3 flex flex-row items-center justify-around xl:px-20 xxl:px-40  text-xs font-semibold text-white bg-red bg-red-500 rounded-tl-lg rounded-tr-lg">
           <li>
             <a
               href="/"
