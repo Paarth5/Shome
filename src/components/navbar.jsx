@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import EmailIcon from "@mui/icons-material/Email";
 import PersonIcon from "@mui/icons-material/Person";
-import MenuIcon from "@mui/icons-material/Menu";
+import Drawer from "./Drawer";
 import SearchIcon from "@mui/icons-material/Search";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
@@ -104,9 +104,9 @@ const Navbar = () => {
           <button href="/" className="scale-110 ">
             <ShoppingBagOutlinedIcon />
           </button>
-          <a href="/login" className="scale-110 ml-3 xl:hidden">
-            <MenuIcon />
-          </a>
+          <button href="/login" className="scale-110 ml-3 xl:hidden">
+            <Drawer />
+          </button>
         </div>
       </div>
       <div className="mx-40 mt-10 hidden xl:block ">
