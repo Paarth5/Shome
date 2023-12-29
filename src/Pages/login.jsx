@@ -1,9 +1,6 @@
 import React from "react";
 import { loginUser } from "../api";
-import { useAuth } from "../authContext";
 const Login = () => {
-  const { login } = useAuth();
-
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
@@ -12,12 +9,12 @@ const Login = () => {
         username: formData.get("username"),
         password: formData.get("password"),
       };
-      const userData = await loginUser(user);
-      login(userData.user);
+      const token = await loginUser(user);
+      localStorage.setItem("user_token", JSON.stringify(token));
+      window.location.href = "/";
     } catch (error) {
       console.error("Login failed:", error.message);
     }
-    window.location.href = "/";
   };
   return (
     <div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import EmailIcon from "@mui/icons-material/Email";
 import PersonIcon from "@mui/icons-material/Person";
@@ -6,9 +6,20 @@ import SearchIcon from "@mui/icons-material/Search";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import { useAuth } from "../authContext";
+import { jwtDecode } from "jwt-decode";
 const Navbar = () => {
-  const { user } = useAuth();
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const token = localStorage.getItem("user_token");
+    if (token) {
+      const parsedToken = JSON.parse(token);
+      const decoded = jwtDecode(parsedToken.token);
+      if (decoded) {
+        setUser({ ...decoded });
+      }
+    }
+  }, []);
   const handleClick = (e) => {
     e.preventDefault();
     const search_bar = document.querySelector("#search_bar");

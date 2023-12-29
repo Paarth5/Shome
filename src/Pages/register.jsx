@@ -1,9 +1,7 @@
 import React from "react";
 import { registerUser } from "../api";
-import { useAuth } from "../authContext";
 
 const Register = () => {
-  const { login } = useAuth();
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
@@ -15,14 +13,12 @@ const Register = () => {
         username: formData.get("username"),
         password: formData.get("password"),
       };
-      const userData = await registerUser(user);
-      console.log(userData);
-      login(userData);
-      console.log("Registration successful:", userData);
+      const token = await registerUser(user);
+      localStorage.setItem("user_token", JSON.stringify(token));
+      window.location.href = "/";
     } catch (error) {
       console.error("Registration failed:", error.message);
     }
-    window.location.href = "/";
   };
   return (
     <div>
