@@ -32,9 +32,6 @@ a:hover {
 .feat-card-img {
   height: 200px;
 }
-.carousel-cont {
-  margin: 10px 10%;
-}
 .zoomable-image {
   overflow: hidden;
   width: 100%;
@@ -75,4 +72,11 @@ a:hover {
 .category-card-cont:hover .zooming-img {
   scale: 1.02;
   transition: all 0.5s;
+}
+.image-zoom:hover {
+  scale: 1.02;
+  transition: all 0.25;
+}
+.last-comp {
+  margin-bottom: 400px;
 }

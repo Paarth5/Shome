@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "./card";
+import Card2 from "./card2";
 import data from "../data/featured";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -18,42 +18,24 @@ const Bestseller = () => {
     mobile: {
       breakpoint: { max: 464, min: 0 },
       items: 1,
-      slidesToSlide: 1, // optional, default to 1.
+      slidesToSlide: 1,
     },
   };
   return (
     <>
       <div>
-        <h1>Best Seller</h1>
-        <p>There are many variations of passages of Lorem Ipsum available</p>
+        <h1 className="text-5xl font-bold text-center">Best Seller</h1>
+        <p className="text-xl mt-5 text-center mb-10">
+          There are many variations of passages of Lorem Ipsum available
+        </p>
       </div>
-      <div className="carousel-cont">
-        {/* <Carousel
-          swipeable={true}
-          draggable={false}
-          showDots={false}
-          renderButtonGroupOutside={false}
-          responsive={responsive}
-          ssr={true} // means to render carousel on server-side.
-          infinite={true}
-          autoPlaySpeed={2000}
-          keyBoardControl={true}
-          customTransition="all .5"
-          transitionDuration={500}
-          containerClass="carousel-container"
-          dotListClass="custom-dot-list-style"
-          itemClass="carousel-item-padding-40-px"
-        >
-          {data.map((d) => {
-            return <Card key={d.id} {...d} />;
-          })}
-        </Carousel> */}
+      <div className="px-40">
         <Carousel
-          swipeable={false}
-          draggable={false}
+          swipeable={true}
+          draggable={true}
           showDots={true}
           responsive={responsive}
-          ssr={true} // means to render carousel on server-side.
+          ssr={true}
           infinite={true}
           autoPlaySpeed={1000}
           keyBoardControl={true}
@@ -65,21 +47,36 @@ const Bestseller = () => {
           itemClass="carousel-item-padding-40-px"
         >
           {data.map((d) => {
-            return <Card key={d.id} {...d} />;
+            return <Card2 key={d.id} {...d} />;
           })}
         </Carousel>
         ;
       </div>
-      <div>
+      <div className="flex px-40 mt-20 justify-around">
         <div>
-          <img src=".\assets\images\sports_shoes1.png" alt="" />
+          <img
+            src=".\assets\images\sports_shoes1.png"
+            alt="blog"
+            className="image-zoom"
+          />
         </div>
         <div>
-          <img src=".\assets\images\sports_shoes2.png" alt="" />
-          <div>
-            <h1>Sports Shoes</h1>
-            <p>UP TO 30% OFF ALL SHOES & PRODUCTS</p>
-            <button>Shop Now</button>
+          <img
+            src=".\assets\images\sports_shoes2.png"
+            alt="blog"
+            className="image-zoom"
+          />
+          <div className="mt-10 ml-10">
+            <h1 className="text-6xl font-bold my-2">Sports Shoes</h1>
+            <p className="text-2xl text-gray-500 my-4">
+              UP TO 30% OFF ALL SHOES & PRODUCTS
+            </p>
+            <button
+              className="mt-5 text-xl font-bold text-white bg-red-500 px-10 py-5 border border-red-500 border-4
+          hover:bg-white hover:text-red-500"
+            >
+              Shop Now
+            </button>
           </div>
         </div>
       </div>
