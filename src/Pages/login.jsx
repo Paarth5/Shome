@@ -39,12 +39,19 @@ const Login = () => {
   return (
     <>
       {user ? (
-        <div className="px-40 mt-20 last-comp text-center">
-          <p className="text-xl">Already logged in as {user.fullName}</p>
+        <div
+          className="px-10
+    lg:px-20
+    xl:px-40
+    xxl:px-60 mt-20 last-comp text-center"
+        >
+          <p className="text-lg md:text-xl">
+            Already logged in as {user.fullName}
+          </p>
           <button
             onClick={logout}
-            className="px-20 bg-black text-white mt-3 py-4 
-                hover:bg-red-500"
+            className="md:px-20 bg-black text-white mt-3 py-4 
+                hover:bg-red-500 px-10"
           >
             Logout
           </button>
