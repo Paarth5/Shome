@@ -101,9 +101,12 @@ const Navbar = () => {
           <button href="/" className="scale-110 mr-3 ">
             <FavoriteBorderIcon />
           </button>
-          <button href="/" className="scale-110 ">
+          <button href="/" className="scale-110">
             <ShoppingBagOutlinedIcon />
           </button>
+          <a href="/login" className="scale-110 ml-3 xl:hidden ">
+            <PersonIcon />
+          </a>
           <button href="/login" className="scale-110 ml-3 xl:hidden">
             <Drawer />
           </button>
